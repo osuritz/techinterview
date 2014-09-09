@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="tech, interview">
+
+    <title>Tech Interview Cheat Sheet</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <header class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./">TICS</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="algorithms.html">Algorithms</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </header>
+
+    <div class="container theme-showcase" role="main">
+      <h1>Algorithms</h1>
+
+      <h1 class="page-header">Binary Search</h1>
+      <p>A binary search <strong>requires that the input be sorted</strong>. The technique is very simple: we basically keep splitting the input in half and determine if the value we're looking for is in the lower or higher half that the midway point. Keep going until we've either found the item or run out of items to look at (in which case we return <code>-1</code>).</p>
+      <p>Time complexity: O(log n)</p>
+<pre style="background:#f9f9f9;color:#080808"><span style="color:#a71d5d;font-style:italic">public</span> <span style="color:#a71d5d;font-style:italic">static</span> <span style="color:#a71d5d;font-style:italic">int</span> <span style="color:#a71d5d;font-style:italic">BinarySearch&lt;<span style="color:#a71d5d;font-style:italic">T</span>></span>(<span style="color:#a71d5d;font-style:italic">T</span>[] array, <span style="color:#a71d5d;font-style:italic">T</span> searchFor, <span style="color:#a71d5d;font-style:italic">Comparer&lt;<span style="color:#a71d5d;font-style:italic">T</span>></span> comparer)
+{
+    <span style="color:#a71d5d;font-style:italic">int</span> high, low, mid;
+    high <span style="color:#794938">=</span> <span style="color:#a71d5d;font-style:italic">array<span style="color:#794938">.</span>Length</span> <span style="color:#794938">-</span> <span style="color:#811f24;font-weight:700">1</span>;
+    low <span style="color:#794938">=</span> <span style="color:#811f24;font-weight:700">0</span>;
+    <span style="color:#794938">if</span> (array[<span style="color:#811f24;font-weight:700">0</span>]<span style="color:#794938">.</span>Equals(searchFor))
+        <span style="color:#794938">return</span> <span style="color:#811f24;font-weight:700">0</span>;
+    <span style="color:#794938">else</span> <span style="color:#794938">if</span> (array[high]<span style="color:#794938">.</span>Equals(searchFor))
+        <span style="color:#794938">return</span> high;
+    <span style="color:#794938">else</span>
+    {
+        <span style="color:#794938">while</span> (low <span style="color:#794938">&lt;=</span> high)
+        {
+            mid <span style="color:#794938">=</span> (high <span style="color:#794938">-</span> low) <span style="color:#794938">/</span> <span style="color:#811f24;font-weight:700">2</span> <span style="color:#794938">+</span> low;
+            <span style="color:#794938">if</span> (<span style="color:#a71d5d;font-style:italic">comparer<span style="color:#794938">.</span>Compare</span>(array[mid], searchFor) <span style="color:#794938">==</span> <span style="color:#811f24;font-weight:700">0</span>)
+                <span style="color:#794938">return</span> mid;
+            <span style="color:#794938">else</span> <span style="color:#794938">if</span> (<span style="color:#a71d5d;font-style:italic">comparer<span style="color:#794938">.</span>Compare</span>(array[mid], searchFor) <span style="color:#794938">></span> <span style="color:#811f24;font-weight:700">0</span>)
+                high <span style="color:#794938">=</span> mid <span style="color:#794938">-</span> <span style="color:#811f24;font-weight:700">1</span>;
+            <span style="color:#794938">else</span>
+                low <span style="color:#794938">=</span> mid <span style="color:#794938">+</span> <span style="color:#811f24;font-weight:700">1</span>;
+        }
+        <span style="color:#794938">return</span> <span style="color:#794938">-</span><span style="color:#811f24;font-weight:700">1</span>;
+    }
+}
+</pre>
+
+      <h1 class="page-header">Depth-First Search</h1>
+      <p>Depth-First Search uses a stack for traversal, whether THE stack (through recursion) or A stack (through iteration).</p>
+
+      <pre>
+
+[Sample code goes here]
+      </pre>
+      <h2>Binary Search Tree In-Order Traversal</h2>
+      <h3>Recursive Solution</h3>
+      <p>If recursion is allowed, a recursion-based solution is very easy to implement for pre-order, in-order, and post-order traversal.</p>
+<pre style="background:#f9f9f9;color:#080808"><span style="color:#a71d5d;font-style:italic">void</span> InOrderTraversal(<span style="color:#a71d5d;font-style:italic">BinaryTree</span> tree) {
+    <span style="color:#794938">if</span> (tree <span style="color:#794938">==</span> <span style="color:#811f24;font-weight:700">null</span>) {
+      <span style="color:#794938">return</span>;
+    }
+
+    InOrderTraversal(<span style="color:#a71d5d;font-style:italic">tree<span style="color:#794938">.</span>Left</span>);
+    <span style="color:#a71d5d;font-style:italic">Console</span><span style="color:#794938">.</span>WriteLine(<span style="color:#a71d5d;font-style:italic">tree<span style="color:#794938">.</span>Data</span>);
+    InOrderTraversal(<span style="color:#a71d5d;font-style:italic">tree<span style="color:#794938">.</span>Right</span>);
+}
+</pre>
+
+      <h1 class="page-header">Breadth-First Search</h1>
+      <p>Where Depth-First Search uses a stack for traversal, this algorithm uses a queue to store intermediate results as it traverses the graph. It has the extremely useful property that if all of the edges in a graph are unweighted (or the same weight) then the first time a node is visited is the shortest path to that node from the source node.</p>
+      <pre>
+
+[Sample code goes here]
+      </pre>
+
+      <h3>Print a Binary Tree in level order</h3>
+      Printing a binary tree in level order is a variant of BFS and uses two queues: one to store the current level items and a second queue to store the children of the current level items. Once the first queue is empty, we swap the current- and next-level queues and keep going.
+      <br />
+      <a href="http://leetcode.com/2010/09/printing-binary-tree-in-level-order.html">http://leetcode.com/2010/09/printing-binary-tree-in-level-order.html</a>
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
