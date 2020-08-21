@@ -19,14 +19,14 @@ You should also know their time complexity for common operations (add, remove, a
 * [Trie (aka Prefix tree)](http://en.wikipedia.org/wiki/Trie). A common application is for autocomplete or predictive text dictionary (think T9).
 * [Red-black tree (self-balancing binary trees)](http://en.wikipedia.org/wiki/Red%E2%80%93black_tree). You typically just need to know about them and their usage rather than know how to implement them.
 
-# [Algorithms](/algorithms)
-* [Binary search](http://en.wikipedia.org/wiki/Binary_search_algorithm) — find the position of an input element within a sorted array.
-* [Tree Traversal: Depth First Search (DFS)](http://en.wikipedia.org/wiki/Depth-first_search)
-* [Tree Traversal: Breadth First Search (BFS)](http://en.wikipedia.org/wiki/Breadth-first_search) — guarantees shortest path.
+## [Algorithms](/algorithms/)
+* [Binary search](/algorithms/binary-search) — find the position of an input element within a sorted array.
+* [Tree Traversal: Depth First Search (DFS)](/algorithms/tree-dfs) http://en.wikipedia.org/wiki/Depth-first_search)
+* [Tree Traversal: Breadth First Search (BFS)](/algorithms/tree-bfs) http://en.wikipedia.org/wiki/Breadth-first_search) — guarantees shortest path.
 * [Quicksort](http://en.wikipedia.org/wiki/Quicksort) vs. [Merge sort](http://en.wikipedia.org/wiki/Merge_sort)
 * [Random permutation](http://en.wikipedia.org/wiki/Random_permutation)
 
-# Object-Oriented Programming (OOP)
+## Object-Oriented Programming (OOP)
 The three pillars of object-oriented programming are: encapsulation, inheritance, and polymorphism.
 You should understand, be able to talk about, and apply the following object-oriented principles.
 * [Encapsulation](http://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming))
@@ -34,7 +34,7 @@ You should understand, be able to talk about, and apply the following object-ori
 * [Polymorphism](http://en.wikipedia.org/wiki/Polymorphism_(computer_science)) (since we're talking about OOP, I’m referring to *inclusion polymorphism*)
 * [Composition](http://en.wikipedia.org/wiki/Object_composition) (and why [one might prefer composition over inheritance](http://en.wikipedia.org/wiki/Composition_over_inheritance))
 
-## Design Patterns
+### Design Patterns
 These are not sorted in any particular order other than alphabetical.
 
 ### Creational Patterns
