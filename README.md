@@ -1,7 +1,4 @@
-# techinterview
-
-Work-in-progress for topics to review or know about when doing tech interviews or simply to brush up
-on your Computer Science knowledge.
+# Tech Interview
 
 ## Data Structures
 For each of the following structures, you should understand how to implement and use them.
