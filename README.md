@@ -21,8 +21,8 @@ You should also know their time complexity for common operations (add, remove, a
 
 ## [Algorithms](/algorithms/)
 * [Binary search](/algorithms/binary-search) — find the position of an input element within a sorted array.
-* [Tree Traversal: Depth First Search (DFS)](/algorithms/tree-dfs) http://en.wikipedia.org/wiki/Depth-first_search)
-* [Tree Traversal: Breadth First Search (BFS)](/algorithms/tree-bfs) http://en.wikipedia.org/wiki/Breadth-first_search) — guarantees shortest path.
+* [Tree Traversal: Depth First Search (DFS)](/algorithms/tree-dfs)
+* [Tree Traversal: Breadth First Search (BFS)](/algorithms/tree-bfs) — guarantees shortest path.
 * [Quicksort](http://en.wikipedia.org/wiki/Quicksort) vs. [Merge sort](http://en.wikipedia.org/wiki/Merge_sort)
 * [Random permutation](http://en.wikipedia.org/wiki/Random_permutation)
 
