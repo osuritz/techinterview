@@ -19,10 +19,10 @@ You should also know their time complexity for common operations (add, remove, a
 * [Trie (aka Prefix tree)](http://en.wikipedia.org/wiki/Trie). A common application is for autocomplete or predictive text dictionary (think T9).
 * [Red-black tree (self-balancing binary trees)](http://en.wikipedia.org/wiki/Red%E2%80%93black_tree). You typically just need to know about them and their usage rather than know how to implement them.
 
-## [Algorithms](algorithms/)
-* [Binary search](algorithms/binary-search) — find the position of an input element within a sorted array.
-* [Tree Traversal: Depth First Search (DFS)](algorithms/tree-dfs)
-* [Tree Traversal: Breadth First Search (BFS)](algorithms/tree-bfs) — guarantees shortest path.
+## [Algorithms](./algorithms/)
+* [Binary search](./algorithms/binary-search) — find the position of an input element within a sorted array.
+* [Tree Traversal: Depth First Search (DFS)](./algorithms/tree-dfs)
+* [Tree Traversal: Breadth First Search (BFS)](./algorithms/tree-bfs) — guarantees shortest path.
 * [Quicksort](http://en.wikipedia.org/wiki/Quicksort) vs. [Merge sort](http://en.wikipedia.org/wiki/Merge_sort)
 * [Random permutation](http://en.wikipedia.org/wiki/Random_permutation)
 
