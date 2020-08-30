@@ -1,6 +1,6 @@
 # Dynamic Programming
-The gist of dynamic programming is to use some sort of cache of previous operations so that you can build up a solution for the value N
-by more/less working your way up from 0 to N and storing the results along the way.
+Dynamic programming is a technique to solve the recursive problems in more efficient manner. Many times in recursion we solve the sub-problems repeatedly.
+In dynamic programming we store the solution of these sub-problems so that we do not have to solve them again, this is called **Memoization**.
 
 Let's start with an example: finding the N-th Fibonacci number.
 `Fibonacci(10) = Fibonacci(9) + Fibonacci(8)` with `Fibonacci(0) = 0` and `Fibonacci(1) = 1`.
@@ -34,6 +34,12 @@ class Fibonacci {
   }
 }
 ```
+
+## Approaches
+Dynamic programming problems can often be tackled one of two ways:
+* **Bottom-up.** More/less work your way up from 0 to N, storing the results along the way. This can make the solution fairly straightforward to implement.
+* **Top-down.** Break the problem into sub-problems and solve them as needed and store the solution. This can often be more optimal by only solving the
+sub-problems needed rather than all subproblems from 0 to N.
 
 ## Coin Change
 The problem below was superbly explained at https://www.youtube.com/watch?v=jgiZlGzXMBw and the [Coin Change problem itself is found on
