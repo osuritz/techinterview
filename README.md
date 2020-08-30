@@ -63,5 +63,5 @@ These are not sorted in any particular order other than alphabetical.
   [Model-View-ViewModel (MVVM)](http://en.wikipedia.org/wiki/Model_View_ViewModel)
 * [Pub/Sub](http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)
 
-# Dynamic Programming
+# [Dynamic Programming](./dynamic-programming/)
 TBD: currying, memoization
