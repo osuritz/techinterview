@@ -5,16 +5,27 @@ For each of the following structures, you should understand how to implement and
 You should also know their time complexity for common operations (add, remove, access).
 
 * [Dynamic array (aka Vector, Array List)](http://en.wikipedia.org/wiki/Dynamic_array)
-* [Linked aist](http://en.wikipedia.org/wiki/Singly_linked_list)
-* [Queue](http://en.wikipedia.org/wiki/Queue_(abstract_data_type))
-* [Stack](http://en.wikipedia.org/wiki/Stack_(abstract_data_type))
+* [Linked list](http://en.wikipedia.org/wiki/Singly_linked_list)
 * [Hash table](http://en.wikipedia.org/wiki/Hash_table)
 * [Heap](http://en.wikipedia.org/wiki/Heap_(data_structure)) (just know about min- and max-heap)
 
 ### Trees
 * [Binary tree](http://en.wikipedia.org/wiki/Binary_tree)
 * [Trie (aka Prefix tree)](http://en.wikipedia.org/wiki/Trie). A common application is for autocomplete or predictive text dictionary (think T9).
-* [Red-black tree (self-balancing binary trees)](http://en.wikipedia.org/wiki/Red%E2%80%93black_tree). You typically just need to know about them and their usage rather than know how to implement them.
+* [Binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)
+  - **Self-balancing binary search trees:**  [AVL tree](https://en.wikipedia.org/wiki/AVL_tree) / [Red-black tree](http://en.wikipedia.org/wiki/Red%E2%80%93black_tree).
+  You typically just need to know about them and their usage rather than know how to implement them.
+
+> **NOTE:**
+> Balanced Binary Search Trees are even better than heaps because in addition to `insert`, `delete`, and `min|max` —which is the contract of
+> the [Priority Queue](./abstract-data-types/priority-queue.md) [absract data type](./abstract-data-types/)—, they provide `findSuccessor`
+> and `findPredecessor` in O (log n) time.
+> The main reason you'd prefer eaps is because the latter are in place: they don't use any extra space.
+
+## [Abstract Data Types](./abstract-data-types/)
+* [Queue](http://en.wikipedia.org/wiki/Queue_(abstract_data_type))
+* [Stack](http://en.wikipedia.org/wiki/Stack_(abstract_data_type))
+* [Priority queue](https://en.wikipedia.org/wiki/Priority_queue)
 
 ## [Algorithms](./algorithms/)
 * [Binary search](./algorithms/binary-search.md) — find the position of an input element within a sorted array.
