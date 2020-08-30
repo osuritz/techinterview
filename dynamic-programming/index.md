@@ -51,7 +51,7 @@ LeetCode](https://leetcode.com/problems/coin-change/).
 
 > **NOTE:** the problem is not asking what these coins are, just how many coins are needed in total.
 
-Here's a TypeScript dynamic programming implementation of it. 
+Here's a TypeScript dynamic programming implementation of it, using a bottom-up approach (notice how we start from 0 and work our way up to N). 
 ```typescript
 function coinChange(coins: number[], amount: number): number {
   const dp = new Array(amount +1);
