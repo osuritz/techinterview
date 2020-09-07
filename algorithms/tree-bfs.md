@@ -8,10 +8,20 @@ Note: when applying BFS on a tree, there is no need to mark "vertices" (aka node
 
 ## When to Use
 * When looking for the shortest path in a graph.
-* Beginning state & ending state and how fast to get there
+* Beginning state & ending state and how fast to get there (e.g. solving a Rubik's Cube)
   - How deep?
   - How many levels?
   - How many transformations?
+  
+## Applications
+* Web crawling
+* Social networking (e.g. friends nearest to you, friends of friends)
+* Network broadcast (packet is exploring the graph)
+* Garbage collection
+* Model checking: draw a graph of all the possible states a chip/circuit or program could reach or have, start from an initial
+state so you visit all the vertices reachable from a particular place.
+* Checking mathematical conjectures
+* Solving puzzles & games
 
 
 ## Sample Implementation
