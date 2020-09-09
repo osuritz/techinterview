@@ -10,6 +10,11 @@ Depth-first search (DFS) is often used to explore the whole graph, not just the 
 
 ## Applications
 * Maze solving
+* Edge classification (tree, forward, backward, cross-edge)
+* Cycle detection (particularly for a directed graph, so that would be directed cycles) which is done —in linear time— by finding a back edge.
+* Topological sort (e.g. job scheduling), “sorting vertices in a (acyclic) graph”.
+  * Run DFS and output the reverse of the “finishing times” of vertices. 
+
 
 ## Sample Implementation
 ```typescript
@@ -17,7 +22,6 @@ interface AdjacencyLists {[index: string]: string[]}
 
 /**
  * Performs a depth-first search (DFS) visit of every node reachable from a specific startNode.
- * 
  * Running time: O(V + E)
  */
 function dfsVisit(graph: AdjacencyLists, startNode: string) {
