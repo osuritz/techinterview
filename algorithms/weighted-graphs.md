@@ -35,6 +35,13 @@ dag-shortest-path(G, 𝑤, 𝑠)
 
 
 ### Sample implementation
-```
+```typescript
 // TODO
+function dagShortestPath(graph) {
+  topologicalSort(graph);
+  // TODO: keep going
+}
+
+function topologicalSort() {
+}
 ```
