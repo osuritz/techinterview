@@ -20,7 +20,7 @@ You should also know their time complexity for common operations (add, remove, a
 > Balanced Binary Search Trees are even better than heaps because in addition to `insert`, `delete`, and `min|max` —which is the contract of
 > the [Priority Queue](./abstract-data-types/priority-queue.md) [absract data type](./abstract-data-types/)—, they provide `findSuccessor`
 > and `findPredecessor` in O (log n) time.
-> The main reason you'd prefer eaps is because the latter are in place: they don't use any extra space.
+> The main reason you'd prefer heaps is because the latter are in place: they don't use any extra space.
 
 ## [Abstract Data Types](./abstract-data-types/)
 * [Queue](http://en.wikipedia.org/wiki/Queue_(abstract_data_type))
