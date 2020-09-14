@@ -10,7 +10,7 @@ For weighted graphs, the two options for single-source shortest paths are:
 |----------|---------------------------------------|------------|---------------|
 | Supports cycles.          |   | ✓ |  ✓ |
 | Supports negative weights | ✓ | | ✓ |
-| Runtime complexity.       | (V+E)  |  O(n²) or O(E+V log V)* | O(V*E)
+| Runtime complexity.       | O(V+E)  |  O(n²) or O(E+V log V)* | O(V*E)
 | Key supporting data structure |   | [Priority queue](../abstract-data-types/priority-queue.md)  |  — |
 
 \* when using the right data structure such as a Fibonacci heap
