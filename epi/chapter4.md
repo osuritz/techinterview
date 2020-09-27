@@ -48,3 +48,43 @@ function reverseDigits(x: number): number {
 console.log(`Reverse of 42: ${reverseDigits(42)}`);
 console.log(`Reverse of -314: ${reverseDigits(-314)}`);
 ```
+
+## 4.9 Check If a Decimal Integer Is a Palindrome
+```typescript
+function isPalindromeNumber(x: number): boolean {
+  if (!Number.isInteger(x)) {
+    throw 'Excepted an integer';
+  }
+
+  if (x < 0) { return false; }
+  if (x === 0) { return true; }
+
+  let n = Math.trunc(Math.log10(x) +1);   // Number of digits in x, neat!
+  let orderOfMagnitude = Math.pow(10, n-1);
+  for (let i=0; i < Math.floor(n / 2); i++) {
+
+    let rightMostDigit = x % 10;
+    let leftMostDigit = Math.floor(x / orderOfMagnitude);
+    if (leftMostDigit !== rightMostDigit) {
+      return false;
+    }
+
+    x = x % orderOfMagnitude; // Remove left-most digit
+    x = Math.floor(x / 10); // Remove right-most digit
+    orderOfMagnitude = orderOfMagnitude / 100;  // Because we've removed two digits from x
+  }
+
+  return true;
+}
+
+expect(isPalindromeNumber(0)).toBe(true);
+expect(isPalindromeNumber(1)).toBe(true);
+expect(isPalindromeNumber(-1)).toBe(false);
+expect(isPalindromeNumber(7)).toBe(true);
+expect(isPalindromeNumber(11)).toBe(true);
+expect(isPalindromeNumber(12)).toBe(false);
+expect(isPalindromeNumber(100)).toBe(false);
+expect(isPalindromeNumber(121)).toBe(true);
+expect(isPalindromeNumber(123321)).toBe(true);
+expect(isPalindromeNumber(214748647)).toBe(false);
+```
