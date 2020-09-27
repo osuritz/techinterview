@@ -24,3 +24,28 @@ function parity(x: number) {
 console.log(`Parity of 3 (0x11): ${parity(11)}`);
 console.log(`Parity of 136 (0x10001000): ${parity(136)}`);
 ```
+
+## Reverse Digits
+```typescript
+/**
+ * E,g, 42 --> 24, -314 --> -413
+ */
+function reverseDigits(x: number) {
+  if (!Number.isInteger(x)) {
+    throw 'Excepted an integer';
+  }
+
+//   let n = Math.abs(x);
+let n = x;
+  let result = 0;
+  while (n != 0) {
+      result = (result * 10) + n % 10;
+      n = Math.trunc(n / 10);  // Note: Math.floor only works as intended on positive integers
+  }
+  
+  return result;
+}
+
+console.log(`Reverse of 42: ${reverseDigits(42)}`);
+console.log(`Reverse of -314: ${reverseDigits(-314)}`);
+```
