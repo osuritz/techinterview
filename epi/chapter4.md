@@ -1,6 +1,6 @@
 # Primitive Types
 
-## Computing the Parity of a Word
+## 4.1 Computing the Parity of a Word
 ```typescript
 /**
  * Returns 1 if the number of "1" in the "word" is odd.
@@ -25,7 +25,7 @@ console.log(`Parity of 3 (0x11): ${parity(11)}`);
 console.log(`Parity of 136 (0x10001000): ${parity(136)}`);
 ```
 
-## Reverse Digits
+## 4.8 Reverse Digits
 ```typescript
 /**
  * E,g, 42 --> 24, -314 --> -413
