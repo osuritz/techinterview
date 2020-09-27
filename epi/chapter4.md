@@ -7,7 +7,7 @@
  * 
  * E.g. the parity of 1011 (decimal 11) is 1 but the parity of 10001000 (decimal 136) is 0.
  */
-function parity(x: number) {
+function parity(x: number): number {
   if (!Number.isInteger(x)) {
     throw 'Excepted an integer';
   }
@@ -30,13 +30,12 @@ console.log(`Parity of 136 (0x10001000): ${parity(136)}`);
 /**
  * E,g, 42 --> 24, -314 --> -413
  */
-function reverseDigits(x: number) {
+function reverseDigits(x: number): number {
   if (!Number.isInteger(x)) {
     throw 'Excepted an integer';
   }
 
-//   let n = Math.abs(x);
-let n = x;
+  let n = x;
   let result = 0;
   while (n != 0) {
       result = (result * 10) + n % 10;
