@@ -13,10 +13,11 @@ function isPalindrome(s: String): boolean {
   return true;
 }
 
-console.log(isPalindrome('racecar')); // true
-console.log(isPalindrome('brewery')); // false
-console.log(isPalindrome('reviver')); // true
-console.log(isPalindromePunctuation('A man, a plan, a canal – Panama')); // false
+expect(isPalindrome('racecar')).toBe(true);
+expect(isPalindrome('brewery')).toBe(false);
+expect(isPalindrome('reviver')).toBe(true);
+expect(isPalindrome('A man, a plan, a canal – Panama')).toBe(false);
+expect(isPalindromePunctuation('A man, a plan, a canal – Panama')).toBe(true);
 ```
 
 ```typescript
