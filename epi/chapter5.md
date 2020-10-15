@@ -50,3 +50,19 @@ function computeMaxProfit(A: number[]): number {
 
 expect(computeMaxProfit([310,315,275,295,260,270,290,230,255,250])).toBe(30);
 ```
+
+## 5.12 Sample Offline Data
+```typescript
+function randomSampling(A: any[], k: number) {
+  if (!Number.isInteger(k)) {
+    throw new Error('Size should be an integer');
+  }
+  
+  for (let i=0; i < k; i++) {
+    let swapTarget = Math.floor(Math.random() * k);
+    let tmp = A[i];
+    A[i] = A[swapTarget];
+    A[swapTarget] = tmp;
+  }
+}
+```
