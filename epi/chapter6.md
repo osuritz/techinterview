@@ -17,7 +17,6 @@ expect(isPalindrome('racecar')).toBe(true);
 expect(isPalindrome('brewery')).toBe(false);
 expect(isPalindrome('reviver')).toBe(true);
 expect(isPalindrome('A man, a plan, a canal – Panama')).toBe(false);
-expect(isPalindromePunctuation('A man, a plan, a canal – Panama')).toBe(true);
 ```
 
 ```typescript
@@ -41,9 +40,9 @@ function isPalindromePunctuation(s: String): boolean {
   return true;
 }
 
-console.log(isPalindromePunctuation('Deer Madam, Reed')); // true
-console.log(isPalindromePunctuation('Napalm')); // false
-console.log(isPalindromePunctuation('A man, a plan, a canal – Panama')); // true
+expect(isPalindromePunctuation('Deer Madam, Reed')).toBe(true);
+expect(isPalindromePunctuation('Napalm')).toBe(false);
+expect(isPalindromePunctuation('A man, a plan, a canal – Panama')).toBe(true);
 ```
 
 ## 6.6 Reverse All the Words in a Sentence
@@ -79,13 +78,13 @@ function reverse(input: string[], start: number, end: number) {
   }
 }
 
-function demo(s: String) {
-  const input = [...s];
-  reverseWords(input);
-  const result = input.join('');
-  console.log(`${s} --> ${result}`)
+// Just used for demo/testing.
+function reverseWordsInString(s: string): string {
+  const A = [...s];
+  reverseWords(A);
+  return A.join('');
 }
 
-demo('Alice likes Bob'); // Alice likes Bob --> Bob likes Alice
-demo('ram is costly'); // ram is costly --> costly is ram
+expect(reverseWordsInString('Alice likes Bob')).toEqual('Bob likes Alice');
+expect(reverseWordsInString('ram is costly')).toEqual('costly is ram');
 ```
