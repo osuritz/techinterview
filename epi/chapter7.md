@@ -1,6 +1,7 @@
 # Linked Lists
 
 ## 7.4 Test for Overlapping Lists (Cycle-free Lists)
+```typescript
 function overlappingNoCycleLists<T>(l0: ListNode<T>, l1: ListNode<T>): ListNode<T>|null {
   let l0Length = listLength(l0);
   let l1Length = listLength(l1);
@@ -20,6 +21,7 @@ function overlappingNoCycleLists<T>(l0: ListNode<T>, l1: ListNode<T>): ListNode<
 
   return l0;
 }
+```
 
 ## Utilities Used
 ```typescript
