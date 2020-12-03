@@ -23,6 +23,34 @@ function overlappingNoCycleLists<T>(l0: ListNode<T>, l1: ListNode<T>): ListNode<
 }
 ```
 
+## 7.7 Remove the 𝑘th Last Element From a List
+```typescript
+function removeKthLast<T>(L: ListNode<T>, k: number): ListNode<T> {
+  let i = 0;
+  let j = 0;
+
+  let slow = L;
+  let fast = L;
+
+  // Move fast pointer ahead by k elements.
+  while (k-- > 0) {
+    if (fast.next == null) {
+      throw new RangeError('Index of out range: ' + k);
+    }
+    fast = fast.next;
+  }
+
+  while (fast.next != null) {
+    slow = slow.next!;
+    fast = fast.next;
+  }
+
+  // Fast is now the last element of the list (tail), and slow is at kth-1 last node.
+  slow.next = slow.next!.next!;
+  return L;
+}
+```
+
 ## Utilities Used
 ```typescript
 class ListNode<T> {
