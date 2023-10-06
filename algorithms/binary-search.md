@@ -1,4 +1,4 @@
-# Algorithms >  Binary Search
+# Algorithms ›  Binary Search
 A binary search **requires that the input be sorted**. The technique is very simple: we basically keep splitting the input in half and determine
 if the value we're looking for is in the lower (left) or higher (right) half than the midway point.
 Keep going until we've either found the item or run out of items to look at (in which case we return `-1`).
