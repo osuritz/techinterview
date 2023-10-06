@@ -6,12 +6,12 @@ For weighted graphs, the two options for single-source shortest paths are:
 * [**Dijkstra**](./graph-dijkstra.md) (preferred because of its running time) for graph with non-negative weights.
 * [Bellman-Ford](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm) for graphs with negative weights.
 
-|          | Single-source shortest paths in DAGs | Dijkstra   | Bellman-Ford  |
-|----------|---------------------------------------|------------|---------------|
-| Supports cycles.          |   | ✓ |  ✓ |
-| Supports negative weights | ✓ | | ✓ |
+|                               | Single-source shortest paths in DAGs  | Dijkstra   | Bellman-Ford  |
+|-------------------------------|---------------------------------------|------------|---------------|
+| Supports cycles.              |                                       | ✓          | ✓             |
+| Supports negative weights     |  ✓                                    |            | ✓             |
 | Runtime complexity.       | O(V+E)  |  O(n²) or O(E+V log V)* | O(V*E)
-| Key supporting data structure | [Queue](../abstract-data-types/queue.md) (because it's [DFS](./graph-dfs.md))  | [Priority queue](../abstract-data-types/priority-queue.md)  |  — |
+| Key supporting data structure | [Queue](../abstract-data-types/queue.md) (because it's [DFS](./graph-dfs.md))  | [Priority queue (eg. max heap)](../abstract-data-types/priority-queue.md)  |  — |
 
 \* when using the right data structure such as a Fibonacci heap
 
