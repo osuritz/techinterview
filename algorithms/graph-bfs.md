@@ -7,7 +7,7 @@ then the first time a node is visited **is the shortest path from the source nod
 Note: when applying BFS on a tree, there is no need to mark "vertices" (aka nodes) as visited because there are no cycles in a tree.
 
 ## When to Use
-* When looking for the shortest path in a graph.
+* When looking for the shortest path in a graph in an unweighted or equally-weighted graph.
 * Beginning state & ending state and how fast to get there (e.g. solving a Rubik's Cube)
   - How deep?
   - How many levels?
