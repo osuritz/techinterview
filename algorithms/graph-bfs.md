@@ -11,6 +11,7 @@ Note: when applying BFS on a tree, there is no need to mark "vertices" (aka node
 * Beginning state & ending state and how fast to get there (e.g. solving a Rubik's Cube)
   - How deep?
   - How many levels?
+  - Traverse by level
   - How many transformations?
   
 ## Applications
@@ -71,11 +72,56 @@ public TreeNode invertTree(TreeNode root) {
 }
 ```
 
+#### JavaScript
+```js
+function invertTree(root) {
+  if (!root) return null;
+  const queue = [root];
+  while (queue.length) {
+    const node = queue.shift();
+    const tmp = node.left;
+    node.left = node.right;
+    node.right = tmp;
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);    
+  }
+  return root;
+}
+```
+
 ### Print a Binary Tree in level order (Easy)
 Printing a binary tree in level order is a variant of BFS and uses two queues: one to store the current level items and a second queue to store
 the children of the current level items.
 Once the first queue is empty, we swap the current- and next-level queues and keep going.
 https://leetcode.com/problems/binary-tree-level-order-traversal/
+
+#### JavaScript
+```js
+function levelOrder(root) {
+  if (!root) {
+    return [];
+  }
+
+  let q1 = [root];
+  let q2 = [];
+  const res = [];
+  
+  while (q1.length) {
+    const level = [];
+    while (q1.length) {
+      let current = q1.shift();
+      level.push(current.val);
+      if (current.left != null) q2.push(current.left);
+      if (current.right != null) q2.push(current.right);
+    }
+        
+    [q1, q2] = [q2, q1];  // Swap q1 & q2
+    res.push(level);
+  }
+  
+  return res;
+};
+```
 
 ### Word Ladder (Medium)
 A series of transformations from *beginWord* to *endWord* via a list of words (dictionary).
