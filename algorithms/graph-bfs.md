@@ -1,4 +1,4 @@
-# Algorithms > Graph Traversal: Breadth-First Search
+# Algorithms › Graph Traversal › Breadth-First Search
 Unlike [Depth-First Search](./graph-dfs.md) which uses a stack for traversal, the Breadth-First-Search algorithm uses a *queue* to store
 intermediate results as it traverses the graph.
 It has the **extremely useful property that**, if all of the edges in a graph are either unweighted or all the same weight,
