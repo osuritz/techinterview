@@ -41,3 +41,21 @@ function dfsVisit(graph: AdjacencyLists, startNode: string) {
   dfsVisitImpl(startNode);
 }
 ```
+
+```typescript
+interface AdjacencyLists {[index: string]: string[]}
+
+/**
+ * Performs a depth-first search (DFS) visit of *every* node.
+ * Running time: O(V + E)
+ */
+function dfsVisit(graph: AdjacencyLists) {
+  const parent = new Map<string, string>();
+  for (const node of Object.keys(graph)) {
+    if (!parent.has(node)) {
+      parent.set(node, '');
+      dfsVisit(graph, node);
+    }
+  }
+}
+```
