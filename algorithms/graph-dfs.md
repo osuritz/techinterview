@@ -60,7 +60,7 @@ function dfsVisit(graph: AdjacencyLists) {
 ## Job Scheduling
 Given a directed acyclic graph (DAG), order vertices so that all edges point from lower order to higher order.
 
-![DAG-Jobs](https://github.com/osuritz/techinterview/assets/928328/a9a331f2-2cc2-4e64-9966-6d997f8edebc)
+![DAG-Jobs-2](https://github.com/osuritz/techinterview/assets/928328/18a2c566-1fda-41f2-bc3e-96cc0f13d168)
 
 ### Solution: Topological Sort
 Run DFS and output the reverse of the “finishing times” of vertices. 
