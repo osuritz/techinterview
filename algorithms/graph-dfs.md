@@ -24,10 +24,10 @@ interface AdjacencyLists {[index: string]: string[]}
  * Performs a depth-first search (DFS) visit of every node reachable from a specific startNode.
  * Running time: O(V + E)
  */
-function dfsVisit(graph: AdjacencyLists, startNode: string) {
+function dfsVisit(graph: AdjacencyLists, startNode: string, parent: Map<string, string> = new Map()) {
   // The parent variable is essentially used to mark a node/vertex as visited.
   // But it can also be used to walk a path back.
-  const parent = new Map<string, string>([[startNode, '']]);
+  if (!parent.has(startNode)) { parent.set(startNode, '') };
   var dfsVisitImpl = function(node: string) {
     console.log(`Visiting ${node}.`);
     for (let adjacent of graph[node]) {
@@ -40,10 +40,6 @@ function dfsVisit(graph: AdjacencyLists, startNode: string) {
 
   dfsVisitImpl(startNode);
 }
-```
-
-```typescript
-interface AdjacencyLists {[index: string]: string[]}
 
 /**
  * Performs a depth-first search (DFS) visit of *every* node.
