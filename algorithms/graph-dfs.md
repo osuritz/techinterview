@@ -50,7 +50,7 @@ function dfsVisit(graph: AdjacencyLists) {
   for (const node of Object.keys(graph)) {
     if (!parent.has(node)) {
       parent.set(node, '');
-      dfsVisit(graph, node);
+      dfsVisit(graph, node, parent);
     }
   }
 }
