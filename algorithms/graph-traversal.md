@@ -1,6 +1,6 @@
 # Algorithms › Graph Traversal
 
-## Finding the shortest path
+## Single-Source Shortest Path (SSSP)
 
 | Situation                            | Algorithm     | Time |
 | ------------------------------------ | ------------- | --- |
